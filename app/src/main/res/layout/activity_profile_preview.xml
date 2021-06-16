@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.ProfilePreview.ProfilePreview">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/drawable_back_arrow" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:isScrollContainer="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintVertical_bias="1.0">
+
+            <TableLayout
+                android:id="@+id/accept_reject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tableLayout">
+
+                <TableRow>
+
+
+                    <Button
+                        android:layout_margin="5dp"
+                        android:id="@+id/accept"
+                        android:text="Accept" />
+
+                    <Button
+                        android:id="@+id/reject"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_margin="5dp"
+                        android:text="Reject" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TableRow>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/bottom_navigation_profile" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_gravity="center"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/email"
+                        android:layout_gravity="center"
+                        android:autoLink="email"
+                        android:textStyle="bold" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/tableLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/accept_reject">
+
+                <TableRow>
+
+                    <TextView
+                        android:text="Bio"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/bio"
+                        android:layout_margin="10dp"
+                        android:padding="1dp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:text="Skills"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/skills"
+                        android:layout_margin="10dp"
+                        android:padding="1dp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:text="Posts:"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/black" />
+                </TableRow>
+
+
+            </TableLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tableLayout2" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

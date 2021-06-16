@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "172882413960",
+    "project_id": "tinderforideas",
+    "storage_bucket": "tinderforideas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172882413960:android:c1b542780cf9a8520ad23d",
+        "android_client_info": {
+          "package_name": "com.example.ideas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "172882413960-fuc8gso4a5ceaqtdvt6s37dho5n1ihm0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVYxAMz936h26x_RFnNYrUwpAuaKhWDTE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "172882413960-fuc8gso4a5ceaqtdvt6s37dho5n1ihm0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

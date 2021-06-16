@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="5dp"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:src="@drawable/bottom_sheet_drag_handle"/>
+    <Button
+        android:id="@+id/share"
+        app:icon="@drawable/bottom_sheet_share"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="start|center"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:text="\t\tShare"/>
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:text="\t\tCancel"
+        app:icon="@drawable/bottom_sheet_cancel"
+        android:gravity="start|center"
+        />
+</LinearLayout>
+</com.google.android.material.card.MaterialCardView>
